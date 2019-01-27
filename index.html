@@ -1,0 +1,171 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>Tukiba - Impulsando Ideas</title>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald" rel="stylesheet" type='text/css'>
+    <link rel="stylesheet" href="css/tukiba.css"/>
+  </head>
+  <body>
+    <section id="portada" class="portada background"> <!-- portada -->
+      <header id="header" class="header contenedor"> <!-- header -->
+        <figure class="logotipo"> <!-- logotipo -->
+          <img src="images/tukibaTech.jpg" width="80" height="130" alt="Tukiba logotipo"/>
+        </figure>
+        <nav class="menu"> <!-- menu -->
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="#monitoreo">Monitoreo</a>
+            </li>
+            <li>
+              <a href="precios.html">Precios</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="contenedor">
+        <h1 class="titulo"><span>Monitoreo en tiempo real</span></h1><!-- titulo -->
+        <h3 class="title-a">Sé el productor que siempre quisiste ser</h3><!-- resumen -->
+        <a class="button" href="#monitoreo">Conoce mas</a><!-- boton -->
+      </div>
+    </section>
+    <section id="graficas" class="graficas contenedor"> <!-- graficas -->
+      <h2>Graficas</h2><!-- titulo -->
+      <article class="grafica"> <!-- grafica 1 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+        <div class="contenedor-grafica-a">
+          <!-- <h3 class="title-b">Humedad</h3> -->
+          <canvas id="humedad"></canvas>
+        </div>
+      </article>
+      <article class="grafica"> <!-- grafica 2 -->
+        <div class="contenedor-grafica-a">
+          <!-- <h3 class="title-b">Invie Classic</h3> -->
+          <canvas id="temperatura"></canvas>
+        </div>
+      </article>
+    </section>
+    <footer class="footer">
+      <div class="contenedor">
+        <div class="contacto">
+          <img src="images/invie-white.png" alt="logotipo blanco"/>
+          <a href="tel:+573024456678"><strong>Telefono</strong> <span>3024456678</span></a>
+          <a href="mailto:contacto@invie.com"><strong>E-mail</strong> <span>contacto@invie.com</span></a>
+        </div>
+        <form class="formulario">
+          <div class="col1">
+            <label for="nombre">Nombre</label>
+            <input type="text" required id="nombre" name="nombre"/>
+            <label for="email">E-mail</label>
+            <input type="email" required id="email" name="email"/>
+            <div class="sexo">
+              <label for="mujer">
+                <input type="radio" id="mujer" checked name="sexo" value="mujer"> mujer
+              </label>
+              <label for="hombre">
+                <input type="radio" id="hombre" name="sexo" value="hombre"> hombre
+              </label>
+            </div>
+            <div class="intereses">
+              <label for="cotizacion">
+                <input type="checkbox" checked id="cotizacion" name="intereses" value="cotizacion"> Cotización
+              </label>
+              <label for="reclamos">
+                <input type="checkbox" id="reclamos" name="intereses" value="reclamos"> Reclamos
+              </label>
+              <label for="comentarios">
+                <input type="checkbox" id="comentarios" name="intereses" value="comantarios"> Comentarios
+              </label>
+              <label for="otros">
+                <input type="checkbox" id="otros" name="intereses" value="otros"> Otros
+              </label>
+            </div>
+          </div>
+          <div class="col2">
+            <label for="comentarios">Comentarios</label>
+            <textarea name="comantarios" id="comentarios" cols="30" rows="7"></textarea>
+            <input type="submit" value="Enviar" class="button"/>
+          </div>
+        </form>
+      </div>
+    </footer>
+  </body>
+  <script type="text/javascript">
+    var url1 = 'https://wtkkz5g5sl.execute-api.us-east-1.amazonaws.com/prod/readDynamo/?deviceid=1CED69'
+    // params = {
+    //     method: 'GET',
+    //     mode: 'cors',
+    //     headers: new Headers( {
+    //         'Content-Type': '1CED69'
+    //     } )
+    // };
+    fetch(url1)
+    .then((response) => {
+      console.log(response)
+      return response.json();
+    })
+    .then((datos) => {
+      console.log('Datos', datos)
+      var ctx = document.getElementById('humedad').getContext('2d');
+      var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+          labels: datos,
+          datasets: [{
+            label: "Humedad",
+            backgroundColor: 'rgb(0, 160, 153)',
+            borderColor: 'rgb(60, 60, 59)',
+            data: datos
+          }]
+        },
+
+        // Configuration options go here
+        options: {}
+      });
+    })
+    .catch(() => {
+      console.log('Algo salio mal !!')
+    });
+
+    //datos de temperatura
+    var url2 = 'https://wtkkz5g5sl.execute-api.us-east-1.amazonaws.com/prod/readDynamo/?deviceid=1CEDE8'
+    fetch(url2)
+    .then((response) => {
+      console.log(response)
+      return response.json();
+    })
+    .then((datos) => {
+      console.log('Datos', datos)
+      var ctx = document.getElementById('temperatura').getContext('2d');
+      var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+          labels: datos,
+          datasets: [{
+            label: "Temperatura",
+            backgroundColor: 'rgb(0, 160, 153)',
+            borderColor: 'rgb(60, 60, 59)',
+            data: datos
+          }]
+        },
+
+        // Configuration options go here
+        options: {}
+      });
+    })
+    .catch(() => {
+      console.log('Algo salio mal !!')
+    });
+
+</script>
+
+</html>
