@@ -1,0 +1,66 @@
+/* reglas
+selectores
+declaraciones
+propiedades
+valore */
+
+body{
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin: 0px;
+}
+
+h1,
+h4{
+  font-family: 'Oswald', sans-serif;
+}
+
+header{
+  background: #00A099;
+  color: white;
+  display: flex;
+}
+
+header a{
+  color: white;
+  text-decoration: none;
+}
+
+header ol{
+  display: flex;
+}
+
+.logo{
+  margin:0
+}
+
+.header-menu{
+  display: flex;
+}
+
+.hero{
+  display: flex;
+}
+
+.hero-imageContainer{
+  width: 500px
+}
+
+.hero-recomendation{
+  margin:0;
+
+
+}
+
+.hero-description{
+  /* width: 500px;
+  height: 200px; */
+  margin:0
+}
+
+.analitics{
+  display: flex;
+}
+
+.hystory{
+  display: flex;
+}

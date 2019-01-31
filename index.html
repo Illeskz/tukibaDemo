@@ -5,70 +5,92 @@
   <title>Tukiba - DEMO</title>
   <link rel="icon" type="image/jpg" href="images/tukibaTech.jpg">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald" rel="stylesheet" type='text/css'>
-  <link rel="stylesheet" href="css/tukiba.css"/>
+  <link rel="stylesheet" href="css/estilos.css"/>
 </head>
   <body>
-    <header>
-      <div class="">
-        <figure>
-          <a href="http://tukiba.com/" target="_parent"><img src="images/tukibaTech.jpg" width="50" height="80" alt="Logo Tukiba"></a> 
-        </figure>
+    <header class="header">
+      <figure class="logo">
+        <a href="http://tukiba.com/" target="_parent"><img src="images/tukibaTech.jpg" width="50" height="80" alt="Logo Tukiba"></a>
+      </figure>
+      <nav class="header-menu">
+        <ol>
+          <li>
+            <a class="link" href="#resumen">Resúmen</a>
+          </li>
+          <li>
+            <a class="link" href="#analisis">Análisis</a>
+          </li>
+          <li>
+            <a class="link" href="#historial">Historial</a>
+          </li>
+        </ol>
+        <ul>
+          <li>
+            <a class="cuenta"href="#">Mi Cuenta</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="hero">
+      <div>
+        <h4>Cultivos</h4>
         <nav>
-          <ol>
-            <li>
-              <a href="#review">Resúmen</a>
-            </li>
-            <li>
-              <a href="#analitics">Análisis</a>
-            </li>
-            <li>
-              <a href="#history">Historial</a>
-            </li>
-          </ol>
-          Mi Cuenta
+          <ul>
+            <a href="#">Papa 10ha</a>
+          </ul>
+          <ul>
+            <a href="#">Lechuga 15ha</a>
+          </ul>
         </nav>
       </div>
-    </header>
-    <section>
-      <h4>Cultivos</h4>
-      <nav>
-        <ul>
-          <a href="#">Papa 10ha</a>
-        </ul>
-        <ul>
-          <a href="#">Lechuga 15ha</a>
-        </ul>
-      </nav>
-      <h1 id="review">Resúmen</h1>
-      <img src="" alt="Imagen del resumen">
-      <h4><strong>Recomendaciones</strong></h4>
-      <article class="">
-        <p>Riega en esta zona</p>
+      <div class="hero-review">
+        <h1 id="resumen">Resúmen</h1>
+        <figure class="hero-imageContainer">
+          <img class="hero-image" src="" alt="Imagen del resumen">
+        </figure>
+      </div>
+      <article class="hero-recomendation">
+        <div class="hero-description">
+          <h4 class="hero-title"><strong>Recomendaciones</strong></h4>
+          <p class="hero-detail">Riega en esta zona alsidjoidjiaaaaaaa aaaaaaaaaaaa aaaaaaaa aasaoda osssssssss sssssssssssssssss ssssssssssssssssssssssssssssssssssssssssssssssssssd</p>
+        </div>
       </article>
     </section>
-    <section>
-      <h4>Finanzas</h4>
-      <nav>
-        <ul>
-          <a href="#">Inversión</a>
-        </ul>
-        <ul>
-          <a href="#">Ahorro</a>
-        </ul>
-        <ul>
-          <a href="#">Posibles Ganancias</a>
-        </ul>
-        <ul>
-          <a href="#">Valor del Producto</a>
-        </ul>
-      </nav>
-      <h1 id="analitics">Análisis</h1>
-      <img src="" alt="Grafícas de análisis">
+    <section class="analitics">
+      <div>
+        <h4>Finanzas</h4>
+        <nav>
+          <ul>
+            <a href="#">Inversión</a>
+          </ul>
+          <ul>
+            <a href="#">Ahorro</a>
+          </ul>
+          <ul>
+            <a href="#">Posibles Ganancias</a>
+          </ul>
+          <ul>
+            <a href="#">Valor del Producto</a>
+          </ul>
+        </nav>
+      </div>
+      <div class="analitics-analitics">
+        <h1 id="analisis">Análisis</h1>
+        <figure class="analitics-imageContainer">
+          <img class="analitics-image"src="" alt="Grafícas de análisis">
+        </figure>
+      </div>
     </section>
-    <section>
-      <h4>Clima</h4>
-      <h1 id="history">Historial</h1>
-      <img src="" alt="Imagen de Historial">
+    <section class="hystory">
+      <div>
+        <h4>Clima</h4>
+      </div>
+      <div>
+        <h1 id="historial">Historial</h1>
+        <figure class="hystory-imageContainer">
+          <img class="hystory-image"src="" alt="Imagen de Historial">
+        </figure>
+      </div>
     </section>
 
   </body>
