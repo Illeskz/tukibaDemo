@@ -29,26 +29,38 @@ header ol{
   display: flex;
 }
 
+header li{
+  width: 100px
+}
+
+
 .logo{
   margin:0
 }
 
 .header-menu{
   display: flex;
+  align-items: flex-end;
 }
 
 .hero{
   display: flex;
 }
 
+.hero div{
+  flex-shrink: 0
+}
+
 .hero-imageContainer{
-  width: 500px
+
 }
 
 .hero-recomendation{
   margin:0;
+}
 
-
+.hero-review{
+  /* padding-left: 100px */
 }
 
 .hero-description{
@@ -61,6 +73,14 @@ header ol{
   display: flex;
 }
 
+.analitics div{
+  flex-shrink: 0
+}
+
 .hystory{
   display: flex;
+}
+
+.hystory div{
+    flex-shrink: 0
 }
