@@ -13,7 +13,7 @@ body{
   background: #00A099;
   color: white;
   display: flex;
-  height: 90px;
+  height: 70px;
   justify-content: space-between;
 }
 
@@ -21,7 +21,7 @@ body{
   margin:0
 }
 
-figure{
+.logo figure{
   margin: 0;
 }
 
@@ -57,15 +57,21 @@ ul{
 
 .hero{
   display: flex;
+  align-items: center;
 }
 
 h1,
 h4{
   font-family: 'Oswald', sans-serif;
+  margin: 0;
 }
 
 .hero div{
   flex-shrink: 0
+}
+
+.hero nav{
+  padding-left: 20px;
 }
 
 .hero a{
@@ -77,13 +83,13 @@ h4{
 }
 
 .hero-review{
-  padding-left: 190px;
+  /* padding-left: 190px; */
 }
 
 .hero-recomendation{
   margin:0;
-  padding-left: 112px;
-  padding-top: 48px;
+  /* padding-left: 112px;
+  padding-top: 48px; */
 }
 
 .hero-description{
@@ -100,12 +106,16 @@ h4{
   flex-shrink: 0
 }
 
+.analitics nav{
+  padding-left: 20px;
+}
+
 .analitics a{
   text-decoration: none;
 }
 
 .analitics-analitics{
-  padding-left: 160px; */
+  padding-left: 160px;
 }
 
 .hystory{
@@ -118,4 +128,17 @@ h4{
 
 .hystory-hystory{
   padding-left: 228px;
+}
+
+.footer{
+  color: white;
+  background-color: #3C3C3B;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer figure{
+  margin: 0;
+  vertical-align: middle;
 }
