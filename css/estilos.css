@@ -10,6 +10,7 @@ body{
 }
 
 .header{
+  border: 1px solid red;
   background: #00A099;
   color: white;
   display: flex;
@@ -56,8 +57,11 @@ ul{
 }
 
 .hero{
+  border: 1px solid red;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  margin: 20px 0px;
 }
 
 h1,
@@ -99,7 +103,9 @@ h4{
 }
 
 .analitics{
+  border: 1px solid red;
   display: flex;
+  margin: 20px 0px;
 }
 
 .analitics div{
@@ -119,7 +125,9 @@ h4{
 }
 
 .hystory{
+  border: 1px solid red;
   display: flex;
+  margin: 20px 0px;
 }
 
 .hystory div{
@@ -131,14 +139,15 @@ h4{
 }
 
 .footer{
+  border: 1px solid red;
   color: white;
   background-color: #3C3C3B;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 20px
 }
 
 .footer figure{
   margin: 0;
-  vertical-align: middle;
 }
