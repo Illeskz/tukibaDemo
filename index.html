@@ -76,9 +76,12 @@
       </div>
       <div class="analitics-analitics">
         <h1 id="analisis">Análisis</h1>
-        <figure class="analitics-imageContainer">
-          <img class="analitics-image"src="" alt="Grafícas de análisis">
-        </figure>
+        <div class="analtics-humidity">
+          <canvas id="humedad"></canvas>
+        </div>
+      </div>
+      <div class="analitics-temp">
+        <canvas id="temperatura"></canvas>
       </div>
     </section>
     <section class="hystory">
@@ -97,11 +100,90 @@
         <p>Tukiba - versión 0.0</p>
       </div>
       <div class="footer-marca">
-        <p>Copyright  2018  TUKIBAMEX, S.A.P.I. de C.V. </p>
+        <p>Copyright  2018,  TUKIBAMEX S.A.P.I. de C.V. </p>
       </div>
       <figure>
         <img src="images/tukibaTechGris.png" width="50" height="70" alt="Logo Tukiba">
       </figure>
     </footer>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+  <script type="text/javascript">
+
+    function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+    }
+    var num = getRandomInt(0,100);
+    var url1 = 'https://wtkkz5g5sl.execute-api.us-east-1.amazonaws.com/prod/readDynamo/?deviceid=1CED69'
+    // params = {
+    //     method: 'GET',
+    //     mode: 'cors',
+    //     headers: new Headers( {
+    //         'Content-Type': '1CED69'
+    //     } )
+    // };
+    fetch(url1)
+    .then((response) => {
+      console.log(response)
+      return response.json();
+    })
+    .then((datos) => {
+      console.log('Datos', datos)
+      var ctx = document.getElementById('humedad').getContext('2d');
+      var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+          labels: datos,
+          datasets: [{
+            label: "Humedad",
+            backgroundColor: 'rgb(0, 160, 153)',
+            borderColor: 'rgb(60, 60, 59)',
+            data: datos
+          }]
+        },
+
+        // Configuration options go here
+        options: {}
+      });
+    })
+    .catch(() => {
+      console.log('Algo salio mal !!')
+    });
+
+    //datos de temperatura
+    var url2 = 'https://wtkkz5g5sl.execute-api.us-east-1.amazonaws.com/prod/readDynamo/?deviceid=1CEDE8'
+    fetch(url2)
+    .then((response) => {
+      console.log(response)
+      return response.json();
+    })
+    .then((datos) => {
+      console.log('Datos', datos)
+      var ctx = document.getElementById('temperatura').getContext('2d');
+      var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+          labels: datos,
+          datasets: [{
+            label: "Temperatura",
+            backgroundColor: 'rgb(0, 160, 153)',
+            borderColor: 'rgb(60, 60, 59)',
+            data: datos
+          }]
+        },
+
+        // Configuration options go here
+        options: {}
+      });
+    })
+    .catch(() => {
+      console.log('Algo salio mal !!')
+    });
+  </script>
 </html>

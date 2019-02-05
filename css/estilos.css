@@ -106,11 +106,12 @@ h4{
   border: 1px solid red;
   display: flex;
   margin: 20px 0px;
+  align-items: center;
 }
 
-.analitics div{
+/* .analitics div{
   flex-shrink: 0
-}
+} */
 
 .analitics nav{
   padding-left: 20px;
