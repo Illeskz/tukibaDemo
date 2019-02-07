@@ -59,7 +59,7 @@ ul{
 .hero{
   border: 1px solid red;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-around; */
   align-items: center;
   margin: 20px 0px;
 }
@@ -72,6 +72,11 @@ h4{
 
 .hero div{
   flex-shrink: 0
+
+}
+
+#hero-menu{
+  padding-left: 20px;
 }
 
 .hero nav{
@@ -83,22 +88,23 @@ h4{
 }
 
 .hero-imageContainer{
-
+  flex-shrink: 0;
+  margin: 0;
 }
 
 .hero-review{
-  /* padding-left: 190px; */
+  padding-left: 160px;
 }
 
 .hero-recomendation{
   margin:0;
-  /* padding-left: 112px;
-  padding-top: 48px; */
+  padding-left: 160px;
+  /* padding-top: 48px; */
 }
 
 .hero-description{
-  /* width: 500px;
-  height: 200px; */
+  width: 500px;
+  height: 188px;
   margin:0
 }
 
@@ -109,9 +115,9 @@ h4{
   align-items: center;
 }
 
-/* .analitics div{
-  flex-shrink: 0
-} */
+#analitics-menu{
+  padding-left: 20px
+}
 
 .analitics nav{
   padding-left: 20px;
