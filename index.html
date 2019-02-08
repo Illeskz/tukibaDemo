@@ -77,11 +77,11 @@
       <div class="analitics-analitics">
         <h1 id="analisis">Análisis</h1>
         <div class="analtics-humidity">
-          <canvas id="humedad"></canvas>
+          <canvas id="humedad" width="500px" height="200px"></canvas>
         </div>
-      </div>
-      <div class="analitics-temp">
-        <canvas id="temperatura"></canvas>
+        <div class="analitics-temp">
+          <canvas id="temperatura" width="500px" height="200px"></canvas>
+        </div>
       </div>
     </section>
     <section class="hystory">
@@ -107,13 +107,12 @@
       </figure>
     </footer>
   </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
   <script type="text/javascript">
 
     function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
     }
-    var num = getRandomInt(0,100);
     var url1 = 'https://wtkkz5g5sl.execute-api.us-east-1.amazonaws.com/prod/readDynamo/?deviceid=1CED69'
     // params = {
     //     method: 'GET',

@@ -111,6 +111,7 @@ h4{
 .analitics{
   border: 1px solid red;
   display: flex;
+  /* justify-content: space-around; */
   margin: 20px 0px;
   align-items: center;
 }
@@ -128,12 +129,14 @@ h4{
 }
 
 .analitics-analitics{
-  padding-left: 160px;
+  padding-left: 136px;
 }
 
 .hystory{
   border: 1px solid red;
   display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
   margin: 20px 0px;
 }
 
