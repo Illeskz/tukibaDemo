@@ -9,6 +9,42 @@ body{
   margin: 0px;
 }
 
+.sidebar {
+  position: fixed;
+  width: 25%;
+  height: 100vh;
+  background: #00A099;
+  /* font-size: 0.65em; */
+}
+
+.sidebar-nav {
+  position: relative;
+  margin: 0 15%;
+  text-align: right;
+  top: 50%;
+  /* transform: translateY(-50%); */
+  font-weight: bold;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+}
+
+.sidebar-nav li {
+    position: relative;
+    margin: 3.2em 0;
+}
+
+.sidebar-nav  a {
+      line-height: 5em;
+      /* text-transform: uppercase; */
+      text-decoration: none;
+      /* letter-spacing: 0.4em; */
+      color: white;
+      display: block;
+      /* transition: all ease-out 300ms; */
+}
+
 .header{
   border: 1px solid red;
   background: #00A099;
