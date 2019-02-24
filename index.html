@@ -9,16 +9,19 @@
 </head>
   <body>
     <aside class="sidebar">
-      <nav class="sidebar-nav">
+      <figure class="logo">
+        <a href="https://tukiba.com/" target="_parent"><img src="images/tukibaTech.jpg" width="50" height="70" alt="Logo Tukiba"></a>
+      </figure>
+      <nav class="sidebar-menu">
         <ul>
           <li class="active">
             <a href="#">Cultivos</a>
           </li>
           <li>
-            <a href="#">Papa 10ha</a>
+            <a href="#">Papa10ha</a>
           </li>
           <li>
-            <a href="#">Lechuga 15ha</a>
+            <a href="#">Lechuga15ha</a>
           </li>
           <li>
             <a href="#">Finanzas</a>
@@ -41,106 +44,103 @@
         </ul>
       </nav>
     </aside>
-    <header class="header">
-      <figure class="logo">
-        <a href="https://tukiba.com/" target="_parent"><img src="images/tukibaTech.jpg" width="50" height="70" alt="Logo Tukiba"></a>
+    <div class="content">
+      <header class="header">
+        <nav class="header-menu">
+          <ol>
+            <li>
+              <a class="link" href="#resumen">Resúmen</a>
+            </li>
+            <li>
+              <a class="link" href="#analisis">Análisis</a>
+            </li>
+            <li>
+              <a class="link" href="#historial">Historial</a>
+            </li>
+          </ol>
+          <ul>
+            <li>
+              <a class="cuenta"href="#">Mi Cuenta</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section class="hero">
+        <div id="hero-menu">
+          <h4>Cultivos</h4>
+          <nav>
+            <ul>
+              <a href="#">Papa 10ha</a>
+            </ul>
+            <ul>
+              <a href="#">Lechuga 15ha</a>
+            </ul>
+          </nav>
+        </div>
+        <div class="hero-review">
+          <h1 id="resumen">Resúmen</h1>
+          <figure class="hero-imageContainer">
+            <img class="hero-image" src="images/variables.jpg" width="302" height="218" alt="Imagen del resumen">
+          </figure>
+        </div>
+        <article class="hero-recomendation">
+          <div class="hero-description">
+            <h4 class="hero-title"><strong>Recomendaciones</strong></h4>
+            <p class="hero-detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          </div>
+        </article>
+      </section>
+      <section class="analitics">
+        <div id="analitics-menu">
+          <h4>Finanzas</h4>
+          <nav>
+            <ul>
+              <a href="#">Inversión</a>
+            </ul>
+            <ul>
+              <a href="#">Ahorro</a>
+            </ul>
+            <ul>
+              <a href="#">Posibles Ganancias</a>
+            </ul>
+            <ul>
+              <a href="#">Valor del Producto</a>
+            </ul>
+          </nav>
+        </div>
+        <div class="analitics-analitics">
+          <h1 id="analisis">Análisis</h1>
+          <div class="analtics-humidity">
+            <canvas id="humedad" width="500px" height="200px"></canvas>
+          </div>
+          <div class="analitics-temp">
+            <canvas id="temperatura" width="500px" height="200px"></canvas>
+          </div>
+        </div>
+      </section>
+      <section class="hystory">
+        <div>
+          <h4>Clima</h4>
+        </div>
+        <div class="hystory-hystory">
+          <h1 id="historial">Historial</h1>
+          <figure class="hystory-imageContainer">
+            <img class="hystory-image"src="" alt="Imagen de Historial">
+          </figure>
+        </div>
+      </section>
+      <footer class="footer">
+      <div class="footer-version">
+        <p>Tukiba - versión 0.0</p>
+      </div>
+      <div class="footer-marca">
+        <p>Copyright  2018,  TUKIBAMEX S.A.P.I. de C.V. </p>
+      </div>
+      <figure>
+        <img src="images/tukibaTechGris.png" width="50" height="70" alt="Logo Tukiba">
       </figure>
-      <nav class="header-menu">
-        <ol>
-          <li>
-            <a class="link" href="#resumen">Resúmen</a>
-          </li>
-          <li>
-            <a class="link" href="#analisis">Análisis</a>
-          </li>
-          <li>
-            <a class="link" href="#historial">Historial</a>
-          </li>
-        </ol>
-        <ul>
-          <li>
-            <a class="cuenta"href="#">Mi Cuenta</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <section class="hero">
-      <div id="hero-menu">
-        <h4>Cultivos</h4>
-        <nav>
-          <ul>
-            <a href="#">Papa 10ha</a>
-          </ul>
-          <ul>
-            <a href="#">Lechuga 15ha</a>
-          </ul>
-        </nav>
-      </div>
-      <div class="hero-review">
-        <h1 id="resumen">Resúmen</h1>
-        <figure class="hero-imageContainer">
-          <img class="hero-image" src="images/variables.jpg" width="302" height="218" alt="Imagen del resumen">
-        </figure>
-      </div>
-      <article class="hero-recomendation">
-        <div class="hero-description">
-          <h4 class="hero-title"><strong>Recomendaciones</strong></h4>
-          <p class="hero-detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        </div>
-      </article>
-    </section>
-    <section class="analitics">
-      <div id="analitics-menu">
-        <h4>Finanzas</h4>
-        <nav>
-          <ul>
-            <a href="#">Inversión</a>
-          </ul>
-          <ul>
-            <a href="#">Ahorro</a>
-          </ul>
-          <ul>
-            <a href="#">Posibles Ganancias</a>
-          </ul>
-          <ul>
-            <a href="#">Valor del Producto</a>
-          </ul>
-        </nav>
-      </div>
-      <div class="analitics-analitics">
-        <h1 id="analisis">Análisis</h1>
-        <div class="analtics-humidity">
-          <canvas id="humedad" width="500px" height="200px"></canvas>
-        </div>
-        <div class="analitics-temp">
-          <canvas id="temperatura" width="500px" height="200px"></canvas>
-        </div>
-      </div>
-    </section>
-    <section class="hystory">
-      <div>
-        <h4>Clima</h4>
-      </div>
-      <div class="hystory-hystory">
-        <h1 id="historial">Historial</h1>
-        <figure class="hystory-imageContainer">
-          <img class="hystory-image"src="" alt="Imagen de Historial">
-        </figure>
-      </div>
-    </section>
-    <footer class="footer">
-        <div class="footer-version">
-          <p>Tukiba - versión 0.0</p>
-        </div>
-        <div class="footer-marca">
-          <p>Copyright  2018,  TUKIBAMEX S.A.P.I. de C.V. </p>
-        </div>
-        <figure>
-          <img src="images/tukibaTechGris.png" width="50" height="70" alt="Logo Tukiba">
-        </figure>
-      </footer>
-
-
+    </footer>
+    </div>
 
 
   </body>
