@@ -14,14 +14,16 @@
       </figure>
       <nav class="sidebar-menu">
         <ul>
-          <li class="active">
+          <li>
             <a href="#">Cultivos</a>
-          </li>
-          <li>
-            <a href="#">Papa10ha</a>
-          </li>
-          <li>
-            <a href="#">Lechuga15ha</a>
+            <ul>
+              <li>
+                <a href="#">Papa10ha</a>
+              </li>
+              <li>
+                <a href="#">Lechuga15ha</a>
+              </li>
+            </ul>
           </li>
           <li>
             <a href="#">Finanzas</a>
@@ -66,7 +68,7 @@
         </nav>
       </header>
       <section class="hero">
-        <div id="hero-menu">
+        <!-- <div id="hero-menu">
           <h4>Cultivos</h4>
           <nav>
             <ul>
@@ -76,7 +78,7 @@
               <a href="#">Lechuga 15ha</a>
             </ul>
           </nav>
-        </div>
+        </div> -->
         <div class="hero-review">
           <h1 id="resumen">Resúmen</h1>
           <figure class="hero-imageContainer">
@@ -91,37 +93,17 @@
         </article>
       </section>
       <section class="analitics">
-        <div id="analitics-menu">
-          <h4>Finanzas</h4>
-          <nav>
-            <ul>
-              <a href="#">Inversión</a>
-            </ul>
-            <ul>
-              <a href="#">Ahorro</a>
-            </ul>
-            <ul>
-              <a href="#">Posibles Ganancias</a>
-            </ul>
-            <ul>
-              <a href="#">Valor del Producto</a>
-            </ul>
-          </nav>
-        </div>
         <div class="analitics-analitics">
           <h1 id="analisis">Análisis</h1>
           <div class="analtics-humidity">
-            <canvas id="humedad" width="500px" height="200px"></canvas>
+            <canvas id="humedad" width="800px" height="400px"></canvas>
           </div>
           <div class="analitics-temp">
-            <canvas id="temperatura" width="500px" height="200px"></canvas>
+            <canvas id="temperatura" width="800px" height="400px"></canvas>
           </div>
         </div>
       </section>
       <section class="hystory">
-        <div>
-          <h4>Clima</h4>
-        </div>
         <div class="hystory-hystory">
           <h1 id="historial">Historial</h1>
           <figure class="hystory-imageContainer">
@@ -141,8 +123,6 @@
       </figure>
     </footer>
     </div>
-
-
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
   <script type="text/javascript">

@@ -12,8 +12,11 @@ body{
 
 .sidebar {
   /* position: fixed; */
+  display: flex;
   width: 15%;
   background: #00A099;
+  flex-direction: column;
+  align-items: center;
   /* font-size: 0.65em; */
 }
 
@@ -26,11 +29,7 @@ body{
 }
 
 .sidebar-menu {
-  /* position: relative;
-  margin: 0 15%;
-  text-align: right;
-  top: 50%;
-  transform: translateY(-50%); */
+  padding-top: 48px;
   font-weight: bold;
 }
 
@@ -41,12 +40,12 @@ body{
 }
 
 .sidebar-menu  a {
-      /* line-height: 5em; */
-      /* text-transform: uppercase; */
-      text-decoration: none;
-      /* letter-spacing: 0.4em; */
-      color: white;
-      /* transition: all ease-out 300ms; */
+    text-decoration: none;
+    color: white;
+}
+
+.content{
+  width: 100%;
 }
 
 .header{
@@ -55,12 +54,13 @@ body{
   color: white;
   display: flex;
   height: 70px;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .header-menu{
   display: flex;
   height: inherit;
+  font-weight: bold;
 }
 
 .header ol, ul{
